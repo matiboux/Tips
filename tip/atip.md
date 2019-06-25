@@ -6,7 +6,7 @@ breadcrumb:
 - ~Tips
 - A Tip!
 author: Matiboux
-date: June 24 2019
+category: misc
 ---
 
 Hi this is a tip!
