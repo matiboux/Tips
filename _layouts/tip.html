@@ -2,11 +2,12 @@
 layout: default
 ---
 
-<ul>
-	<li>From: <b>{{ page.author }}</b></li>
+<h1>{{ page.title }}</h1>
+
+<h6>Information</h6>
+<ul class="metainfos">
+	<li><i class="fas fa-user fa-fw icon"></i> {{ page.author }}</b></li>
 	<li>Date: <b>{{ page.date }}</b></li>
 </ul>
-
-<h1>{{ page.title }}</h1>
 
 {{ content }}
