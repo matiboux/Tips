@@ -5,9 +5,24 @@ layout: default
 <h1>{{ page.title }}</h1>
 
 <h6>Information</h6>
-<ul class="metainfos">
-	<li><i class="fas fa-user fa-fw icon"></i> {{ page.author }}</b></li>
-	<li>Date: <b>{{ page.date }}</b></li>
+<ul id="meta">
+	{% if page.author %}
+		<li>
+			<i class="fas fa-user icon"></i>
+			{% if page.author_url %}
+				<a href="{{ page.author_url }}">{{ page.author }}</a>
+			{% else %}
+				{{ page.author }}
+			{% endif %}
+		</li>
+	{% endif %}
+	{% if page.date %}
+		<li><i class="fas fa-clock icon"></i> {{ page.date }}</li>
+	{% endif %}
+	{% if page.category %}
+		<li><i class="fas fa-hashtag icon"></i> {{ page.category }}</li>
+	{% endif %}
 </ul>
+<hr />
 
 {{ content }}
